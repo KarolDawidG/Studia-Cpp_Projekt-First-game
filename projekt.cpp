@@ -12,11 +12,13 @@ srand(time(NULL));
 int  wybor;
     while (wybor !=4)
     {
-    cout << "Wybor opcji: " << endl<<endl;
+    cout << "=============================="<<endl;
+    cout << "Wybor opcji: " << endl;
     cout << "1. Papier" << endl;
     cout << "2. Norzyce" << endl;
     cout << "3. Kamien" << endl;
     cout << "4. Koniec gry." << endl;
+    cout << "=============================="<<endl;
     cin >> wybor;
     switch(wybor)
     {
@@ -26,16 +28,17 @@ int  wybor;
         int R = losowanie();
         if (R == 2 ) {
         cout <<"Komputer wybral: kamien !!!"<<endl;
-        cout << "wygrales "<< endl;
+        cout <<" ==>> Papier owija kamien !!! <<=="<<endl<<endl;
+        cout << "                Wygrales "<<endl<<endl;
         cout <<"Nacisnij ENTER aby zagrac jeszcze raz!!!"<<endl; }
         else if (R == 3) {
-        cout <<"Komputer wybral: norzyce !!!"<<endl;
-         cout << "przegrales "<< endl;
+        cout <<"Komputer wybral: norzyce !!!"<<endl<<endl;
+         cout << "                Przegrales "<< endl<<endl;
          cout <<"Nacisnij ENTER aby zagrac jeszcze raz!!!"<<endl;
         }
         else if (R == 1){
-        cout <<"Komputer wybral: papier !!!"<<endl;
-         cout <<"Remis!"<<endl;
+        cout <<"Komputer wybral: papier !!!"<<endl<<endl;
+         cout <<"                Remis!"<<endl<<endl;
          cout <<"Nacisnij ENTER aby zagrac jeszcze raz!!!"<<endl;
         }
         else
@@ -49,17 +52,18 @@ int  wybor;
         cout << "Wybrales Norzyce :) " << endl;
         int R = losowanie();
         if (R == 2 ) {
-        cout <<"Komputer wybral: kamien !!!"<<endl;
-        cout << "Przegrales :( "<< endl;
+        cout <<"Komputer wybral: kamien !!!"<<endl<<endl;
+        cout << "                Przegrales :( "<<endl<<endl;
         cout <<"Nacisnij ENTER aby zagrac jeszcze raz!!!"<<endl; }
         else if (R == 3) {
-        cout <<"Komputer wybral: norzyce !!!"<<endl;
-         cout << "Remis ! ! ! "<< endl;
+        cout <<"Komputer wybral: norzyce !!!"<<endl<<endl;
+         cout << "                Remis ! ! ! "<<endl<<endl;
          cout <<"Nacisnij ENTER aby zagrac jeszcze raz!!!"<<endl;
         }
         else if (R == 1){
         cout <<"Komputer wybral: papier !!!"<<endl;
-         cout <<"WYGRALES :) !!!"<<endl;
+         cout <<"==>> Norzyce przecinaja papier!!! <<=="<<endl<<endl;
+         cout <<"                WYGRALES :) !!!"<<endl<<endl;
          cout <<"Nacisnij ENTER aby zagrac jeszcze raz!!!"<<endl;
         }
         else
@@ -73,17 +77,18 @@ int  wybor;
         cout << "Wybrales Kamien " << endl;
         int R = losowanie();
         if (R == 2 ) {
-        cout <<"Komputer wybral: kamien !!!"<<endl;
-        cout << "Remis :) "<< endl;
+        cout <<"Komputer wybral: kamien !!!"<<endl<<endl;
+        cout << "                Remis :) "<<endl<<endl;
         cout <<"Nacisnij ENTER aby zagrac jeszcze raz!!!"<<endl; }
         else if (R == 3) {
-        cout <<"Komputer wybral: norzyce !!!"<<endl;
-         cout << "WYGRALES :) !!! "<< endl;
+        cout <<"Komputer wybral: norzyce !"<<endl;
+         cout << "==>> Kamien tepi norzyce!!! <<=="<<endl<<endl;
+         cout << "                WYGRALES :) !!! "<<endl<<endl;
          cout <<"Nacisnij ENTER aby zagrac jeszcze raz!!!"<<endl;
         }
         else if (R == 1){
-        cout <<"Komputer wybral: papier !!!"<<endl;
-         cout <<"Przegrales :( !"<<endl;
+        cout <<"Komputer wybral: papier !!!"<<endl<<endl;
+         cout <<"                Przegrales :( !"<<endl<<endl;
          cout <<"Nacisnij ENTER aby zagrac jeszcze raz!!!"<<endl;
         }
         else
@@ -108,7 +113,3 @@ int losowanie ()
     int w = rand()%3+1;
     return w;
 }
-
-
-
-
