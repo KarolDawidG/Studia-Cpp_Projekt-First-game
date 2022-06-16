@@ -12,6 +12,7 @@ srand(time(NULL));
 int  wybor;
     while (wybor !=4)
     {
+    cout <<"Gra papier, norzyce, kamien."<<endl<<endl;
     cout << "=============================="<<endl;
     cout << "Wybor opcji: " << endl;
     cout << "1. Papier" << endl;
