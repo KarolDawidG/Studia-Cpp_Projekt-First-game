@@ -16,7 +16,7 @@ int  wybor, punkty=0, punktyPC=0;
     cout << "=============================="<<endl;
     cout << "Wybor opcji: " << endl;
     cout << "1. Papier" << endl;
-    cout << "2. nozyce" << endl;
+    cout << "2. Nozyce" << endl;
     cout << "3. Kamien" << endl;
     cout << "4. Koniec gry." << endl;
     cout << "=============================="<<endl;
@@ -109,11 +109,12 @@ int  wybor, punkty=0, punktyPC=0;
         break;
         default: cout<<"Nie ma takiej opcji!"<< endl<<endl;
         }
-        cout <<"Punkty ktore zdobyles: "<<punkty<<endl;
-        cout <<"Punkty ktore zdobyl komputer: "<<punktyPC<<endl;
         getchar();
         getchar();
         system("cls");
+        cout <<"Punkty ktore zdobyles: "<<punkty<<endl;
+        cout <<"Punkty ktore zdobyl komputer: "<<punktyPC<<endl;
+
     }
         return 0;
 }
