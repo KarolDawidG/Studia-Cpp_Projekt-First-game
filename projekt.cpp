@@ -9,14 +9,14 @@ int main()
 
 {
 srand(time(NULL));
-int  wybor;
+int  wybor, punkty=0, punktyPC=0;
     while (wybor !=4)
     {
-    cout <<"Gra papier, norzyce, kamien."<<endl<<endl;
+    cout <<"Gra papier, nozyce, kamien."<<endl<<endl;
     cout << "=============================="<<endl;
     cout << "Wybor opcji: " << endl;
     cout << "1. Papier" << endl;
-    cout << "2. Norzyce" << endl;
+    cout << "2. nozyce" << endl;
     cout << "3. Kamien" << endl;
     cout << "4. Koniec gry." << endl;
     cout << "=============================="<<endl;
@@ -30,17 +30,19 @@ int  wybor;
         if (R == 2 ) {
         cout <<"Komputer wybral: kamien !!!"<<endl;
         cout <<" ==>> Papier owija kamien !!! <<=="<<endl<<endl;
+        punkty++;
         cout << "                Wygrales "<<endl<<endl;
-        cout <<"Nacisnij ENTER aby zagrac jeszcze raz!!!"<<endl; }
+        cout <<"Nacisnij ENTER aby zagrac jeszcze raz!!!"<<endl<<endl; }
         else if (R == 3) {
-        cout <<"Komputer wybral: norzyce !!!"<<endl<<endl;
+        cout <<"Komputer wybral: nozyce !!!"<<endl<<endl;
+        punktyPC++;
          cout << "                Przegrales "<< endl<<endl;
-         cout <<"Nacisnij ENTER aby zagrac jeszcze raz!!!"<<endl;
+         cout <<"Nacisnij ENTER aby zagrac jeszcze raz!!!"<<endl<<endl;
         }
         else if (R == 1){
         cout <<"Komputer wybral: papier !!!"<<endl<<endl;
          cout <<"                Remis!"<<endl<<endl;
-         cout <<"Nacisnij ENTER aby zagrac jeszcze raz!!!"<<endl;
+         cout <<"Nacisnij ENTER aby zagrac jeszcze raz!!!"<<endl<<endl;
         }
         else
         {
@@ -50,22 +52,24 @@ int  wybor;
     break;
     case 2:
         {
-        cout << "Wybrales Norzyce :) " << endl;
+        cout << "Wybrales nozyce :) " << endl;
         int R = losowanie();
         if (R == 2 ) {
         cout <<"Komputer wybral: kamien !!!"<<endl<<endl;
+        punktyPC++;
         cout << "                Przegrales :( "<<endl<<endl;
-        cout <<"Nacisnij ENTER aby zagrac jeszcze raz!!!"<<endl; }
+        cout <<"Nacisnij ENTER aby zagrac jeszcze raz!!!"<<endl<<endl; }
         else if (R == 3) {
-        cout <<"Komputer wybral: norzyce !!!"<<endl<<endl;
+        cout <<"Komputer wybral: nozyce !!!"<<endl<<endl;
          cout << "                Remis ! ! ! "<<endl<<endl;
-         cout <<"Nacisnij ENTER aby zagrac jeszcze raz!!!"<<endl;
+         cout <<"Nacisnij ENTER aby zagrac jeszcze raz!!!"<<endl<<endl;
         }
         else if (R == 1){
         cout <<"Komputer wybral: papier !!!"<<endl;
-         cout <<"==>> Norzyce przecinaja papier!!! <<=="<<endl<<endl;
+         cout <<"==>> nozyce przecinaja papier!!! <<=="<<endl<<endl;
+         punkty++;
          cout <<"                WYGRALES :) !!!"<<endl<<endl;
-         cout <<"Nacisnij ENTER aby zagrac jeszcze raz!!!"<<endl;
+         cout <<"Nacisnij ENTER aby zagrac jeszcze raz!!!"<<endl<<endl;
         }
         else
         {
@@ -80,17 +84,19 @@ int  wybor;
         if (R == 2 ) {
         cout <<"Komputer wybral: kamien !!!"<<endl<<endl;
         cout << "                Remis :) "<<endl<<endl;
-        cout <<"Nacisnij ENTER aby zagrac jeszcze raz!!!"<<endl; }
+        cout <<"Nacisnij ENTER aby zagrac jeszcze raz!!!"<<endl<<endl; }
         else if (R == 3) {
-        cout <<"Komputer wybral: norzyce !"<<endl;
-         cout << "==>> Kamien tepi norzyce!!! <<=="<<endl<<endl;
+        cout <<"Komputer wybral: nozyce !"<<endl;
+         cout << "==>> Kamien tepi nozyce!!! <<=="<<endl<<endl;
+         punkty++;
          cout << "                WYGRALES :) !!! "<<endl<<endl;
-         cout <<"Nacisnij ENTER aby zagrac jeszcze raz!!!"<<endl;
+         cout <<"Nacisnij ENTER aby zagrac jeszcze raz!!!"<<endl<<endl;
         }
         else if (R == 1){
         cout <<"Komputer wybral: papier !!!"<<endl<<endl;
+        punktyPC++;
          cout <<"                Przegrales :( !"<<endl<<endl;
-         cout <<"Nacisnij ENTER aby zagrac jeszcze raz!!!"<<endl;
+         cout <<"Nacisnij ENTER aby zagrac jeszcze raz!!!"<<endl<<endl;
         }
         else
         {
@@ -103,6 +109,8 @@ int  wybor;
         break;
         default: cout<<"Nie ma takiej opcji!"<< endl<<endl;
         }
+        cout <<"Punkty ktore zdobyles: "<<punkty<<endl;
+        cout <<"Punkty ktore zdobyl komputer: "<<punktyPC<<endl;
         getchar();
         getchar();
         system("cls");
